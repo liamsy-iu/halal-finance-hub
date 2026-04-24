@@ -1,7 +1,8 @@
+const API_URL = API_URL || 'https://halal-finance-hub.fly.dev';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://halal-finance-hub.fly.dev'
+const API_URL = API_URL || 'https://halal-finance-hub.fly.dev'
 
 export default function Sukuk() {
   const [structures, setStructures] = useState([])
