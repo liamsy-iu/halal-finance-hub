@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+const API_URL = import.meta.env.VITE_API_URL || 'https://halal-finance-hub.fly.dev'
+
 export default function Products() {
   const [products, setProducts] = useState([])
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -13,7 +15,8 @@ export default function Products() {
 
   const loadProducts = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/products`)
+      console.log('API_URL:', API_URL) // Debug log
+      const response = await axios.get(`${API_URL}/products`)
       setProducts(response.data)
       setLoading(false)
     } catch (error) {
