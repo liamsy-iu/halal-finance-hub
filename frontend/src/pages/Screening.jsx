@@ -14,7 +14,7 @@ export default function Screening() {
     setResult(null)
 
     try {
-      const response = await axios.post('http://localhost:8000/screening/screen', {
+      const response = await axios.post('import.meta.env.VITE_API_URL/screening/screen', {
         ticker: ticker.toUpperCase()
       })
       setResult(response.data)

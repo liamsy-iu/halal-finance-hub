@@ -13,7 +13,7 @@ export default function Products() {
 
   const loadProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/products')
+      const response = await axios.get('import.meta.env.VITE_API_URL/products')
       setProducts(response.data)
       setLoading(false)
     } catch (error) {

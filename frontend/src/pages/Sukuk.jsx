@@ -16,8 +16,8 @@ export default function Sukuk() {
   const loadData = async () => {
     try {
       const [structuresRes, issuancesRes] = await Promise.all([
-        axios.get('http://localhost:8000/sukuk/structures'),
-        axios.get('http://localhost:8000/sukuk/issuances')
+        axios.get('import.meta.env.VITE_API_URL/sukuk/structures'),
+        axios.get('import.meta.env.VITE_API_URL/sukuk/issuances')
       ])
       setStructures(structuresRes.data)
       setIssuances(issuancesRes.data)
