@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import API_URL from '../config'
 
 export default function Screening() {
   const [ticker, setTicker] = useState('')
@@ -14,7 +15,7 @@ export default function Screening() {
     setResult(null)
 
     try {
-      const response = await axios.post('import.meta.env.VITE_API_URL/screening/screen', {
+      const response = await axios.post(`${API_URL}/screening/screen`, {
         ticker: ticker.toUpperCase()
       })
       setResult(response.data)
