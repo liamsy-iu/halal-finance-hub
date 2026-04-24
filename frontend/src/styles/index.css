@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+    background-color: #102a43;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .islamic-pattern {
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212, 175, 55, .05) 35px, rgba(212, 175, 55, .05) 70px),
+      repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(212, 175, 55, .05) 35px, rgba(212, 175, 55, .05) 70px);
+  }
+  
+  .card-premium {
+    @apply backdrop-blur-sm rounded-lg p-8 shadow-xl transition-all duration-300;
+    background-color: rgba(36, 59, 83, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  
+  .card-premium:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+  }
+  
+  .gradient-gold {
+    @apply text-white;
+    background: linear-gradient(to bottom right, #d4af37, #b8941f);
+  }
+  
+  .btn-primary {
+    @apply text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg;
+    background: linear-gradient(to right, #059669, #047857);
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(to right, #047857, #065f46);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #d4af37;
+    color: #102a43;
+  }
+}
